@@ -1,0 +1,302 @@
+/*
+  Estilos do portfólio de Gabriel Chagas Lage
+  Separado do HTML principal
+*/
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Fira Code', 'Courier New', monospace;
+  background: #0d1117;
+  color: #00ff00;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.terminal-container {
+  max-width: 1200px;
+  margin: 20px auto;
+  background: #161b22;
+  border-radius: 8px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+  border: 1px solid #30363d;
+}
+
+.terminal-header {
+  background: #21262d;
+  padding: 15px 25px;
+  display: flex;
+  align-items: center;
+  color: #c9d1d9;
+  border-bottom: 1px solid #30363d;
+}
+
+.terminal-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.terminal-button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.close { background: #ff5f56; }
+.minimize { background: #ffbd2e; }
+.maximize { background: #27ca3f; }
+
+.terminal-title {
+  margin-left: 15px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #8b949e;
+}
+
+.terminal-content {
+  padding: 25px;
+  min-height: 70vh;
+  background: #0d1117;
+}
+
+.prompt {
+  color: #7ee787;
+  font-weight: 600;
+}
+
+.command {
+  color: #58a6ff;
+  font-weight: 500;
+}
+
+.output {
+  margin: 12px 0;
+  line-height: 1.6;
+}
+
+.section-header {
+  color: #f0883e;
+  font-weight: 700;
+  font-size: 20px;
+  margin: 25px 0 20px 0;
+  border-bottom: 2px solid #30363d;
+  padding-bottom: 8px;
+}
+
+.navigation {
+  background: #21262d;
+  padding: 20px 25px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  border-bottom: 1px solid #30363d;
+}
+
+.nav-btn {
+  background: transparent;
+  border: 1px solid #30363d;
+  color: #8b949e;
+  padding: 10px 16px;
+  border-radius: 6px;
+  font-family: 'Fira Code', monospace;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.nav-btn:hover {
+  background: #30363d;
+  color: #58a6ff;
+  border-color: #58a6ff;
+  transform: translateY(-1px);
+}
+
+.nav-btn.active {
+  background: #238636;
+  border-color: #238636;
+  color: white;
+}
+
+.section {
+  display: none;
+  animation: fadeIn 0.3s ease-in;
+}
+
+.section.active {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.job-item, .cert-item, .project-item {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(116, 185, 255, 0.3);
+  border-radius: 8px;
+  padding: 20px;
+  margin: 15px 0;
+  transition: all 0.3s ease;
+}
+
+.job-item:hover, .cert-item:hover, .project-item:hover {
+  border-color: #74b9ff;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(116, 185, 255, 0.1);
+}
+
+.item-title {
+  color: #58a6ff;
+  font-weight: 700;
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.item-company, .item-period {
+  color: #f0883e;
+  font-size: 14px;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.item-description {
+  color: #c9d1d9;
+  line-height: 1.5;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.skill-item {
+  background: #21262d;
+  border: 1px solid #238636;
+  border-radius: 8px;
+  padding: 12px;
+  text-align: center;
+  color: #7ee787;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.skill-item:hover {
+  background: #238636;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.contact-info {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(240, 136, 62, 0.4);
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px 0;
+}
+
+.contact-link, .cert-link {
+  color: #58a6ff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+  border-bottom: 1px dotted #58a6ff;
+}
+
+.contact-link:hover, .cert-link:hover {
+  color: #79c0ff;
+  border-bottom-color: #79c0ff;
+}
+
+.cert-badge {
+  width: 120px;
+  height: 120px;
+  margin: 10px 0;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.cert-badge:hover {
+  transform: scale(1.05);
+}
+
+.cert-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.cert-info {
+  flex: 1;
+  min-width: 300px;
+}
+
+.cert-image {
+  flex-shrink: 0;
+}
+
+.typing-effect {
+  overflow: hidden;
+  border-right: 2px solid #00ff00;
+  white-space: nowrap;
+  animation: typing 3s steps(40, end), blink-caret 0.75s step-end infinite;
+  color: #00ff00;
+  font-weight: 600;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: #00ff00; }
+}
+
+@media (max-width: 768px) {
+  .terminal-container {
+    margin: 10px;
+  }
+  
+  .navigation {
+    padding: 15px;
+    gap: 10px;
+  }
+  
+  .nav-btn {
+    padding: 8px 14px;
+    font-size: 12px;
+  }
+  
+  .skills-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+
+  .cert-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .cert-image {
+    align-self: center;
+  }
+
+  .cert-badge {
+    width: 100px;
+    height: 100px;
+  }
+}

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seu Nome | Portfólio Pessoal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="terminal-container">
+    <div class="terminal-header">
+      <div class="terminal-buttons">
+        <div class="terminal-button close"></div>
+        <div class="terminal-button minimize"></div>
+        <div class="terminal-button maximize"></div>
+      </div>
+      <div class="terminal-title">usuario@linux:~$ Portfólio Pessoal</div>
+    </div>
+    <div class="navigation">
+      <button class="nav-btn active" onclick="showSection('home')">~/home</button>
+      <button class="nav-btn" onclick="showSection('about')">./sobre</button>
+      <button class="nav-btn" onclick="showSection('experience')">./experiencia</button>
+      <button class="nav-btn" onclick="showSection('education')">./formacao</button>
+      <button class="nav-btn" onclick="showSection('skills')">./habilidades</button>
+      <button class="nav-btn" onclick="showSection('projects')">./projetos</button>
+      <button class="nav-btn" onclick="showSection('contact')">./contato</button>
+    </div>
+    <div class="terminal-content">
+      <!-- HOME SECTION -->
+      <div id="home" class="section active">
+        <div class="output">
+          <span class="prompt">usuario@portfolio:~$</span> <span class="command">whoami</span>
+        </div>
+        <div class="output typing-effect">
+          Seu Nome - Profissão ou Área de Atuação
+        </div>
+        <div class="output">
+          <span class="prompt">usuario@portfolio:~$</span> <span class="command">cat welcome.txt</span>
+        </div>
+        <div class="output">
+          <div class="section-header">$ Bem-vindo ao meu Portfólio</div>
+          <p>Breve apresentação pessoal.</p>
+          <p>📍 Sua Cidade, Estado, País</p>
+          <p>🎓 Sua Formação Principal</p>
+          <br>
+          <p>Navegue pelas abas acima para conhecer mais sobre mim.</p>
+        </div>
+      </div>
+      <!-- ABOUT SECTION -->
+      <div id="about" class="section">
+        <div class="output">
+          <span class="prompt">usuario@portfolio:~$</span> <span class="command">cat sobre.md</span>
+        </div>
+        <div class="output">
+          <div class="section-header">$ Sobre Mim</div>
+          <p>Descreva aqui um pouco sobre você, sua trajetória, interesses e objetivos profissionais.</p>
+        </div>
+      </div>
+      <!-- EXPERIENCE SECTION -->
+      <div id="experience" class="section">
+        <div class="output">
+          <span class="prompt">usuario@portfolio:~$</span> <span class="command">ls -la ./experiencia/</span>
+        </div>
+        <div class="output">
+          <div class="section-header">$ Experiência Profissional</div>
+          <div class="job-item">
+            <div class="item-title">Cargo Exemplo</div>
+            <div class="item-company">Empresa Exemplo</div>
+            <div class="item-period">Jan 2023 - Dez 2023</div>
+            <div class="item-description">
+              • Descreva suas principais atividades e conquistas neste cargo.<br>
+              • Destaque resultados ou aprendizados relevantes.
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- EDUCATION SECTION -->
+      <div id="education" class="section">
+        <div class="output">
+          <span class="prompt">usuario@portfolio:~$</span> <span class="command">cat formacao.json</span>
+        </div>
+        <div class="output">
+          <div class="section-header">$ Formação Acadêmica</div>
+          <div class="job-item">
+            <div class="item-title">Curso Exemplo</div>
+            <div class="item-company">Instituição Exemplo</div>
+            <div class="item-period">2020 - 2023</div>
+            <div class="item-description">
+              Breve descrição do curso e foco de estudos.
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- SKILLS SECTION -->
+      <div id="skills" class="section">
+        <div class="output">
+          <span class="prompt">usuario@portfolio:~$</span> <span class="command">./habilidades --listar</span>
+        </div>
+        <div class="output">
+          <div class="section-header">$ Habilidades</div>
+          <div class="skills-grid">
+            <div class="skill-item">Habilidade 1</div>
+            <div class="skill-item">Habilidade 2</div>
+            <div class="skill-item">Habilidade 3</div>
+            <div class="skill-item">Habilidade 4</div>
+          </div>
+        </div>
+      </div>
+      <!-- PROJECTS SECTION -->
+      <div id="projects" class="section">
+        <div class="output">
+          <span class="prompt">usuario@portfolio:~$</span> <span class="command">ls -la ./projetos/</span>
+        </div>
+        <div class="output">
+          <div class="section-header">$ Projetos</div>
+          <div class="project-item">
+            <div class="item-title">Projeto Exemplo</div>
+            <div class="item-period">2024</div>
+            <div class="item-description">
+              Descrição do projeto, tecnologias utilizadas e resultados.
+              <br><strong>Link:</strong> <a href="#" class="contact-link" target="_blank">🔗 Ver Projeto</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- CONTACT SECTION -->
+      <div id="contact" class="section">
+        <div class="output">
+          <span class="prompt">usuario@portfolio:~$</span> <span class="command">cat contato.info</span>
+        </div>
+        <div class="output">
+          <div class="section-header">$ Contato</div>
+          <div class="contact-info">
+            <p><strong>📧 Email:</strong> <a href="mailto:seu.email@email.com" class="contact-link">seu.email@email.com</a></p>
+            <p><strong>💼 LinkedIn:</strong> <a href="#" target="_blank" class="contact-link">linkedin.com/in/seu-perfil</a></p>
+            <p><strong>📱 Telefone:</strong> (00) 00000-0000</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
