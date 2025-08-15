@@ -23,9 +23,10 @@
       <button class="nav-btn" onclick="showSection('experience')">./experience</button>
       <button class="nav-btn" onclick="showSection('education')">./education</button>
       <button class="nav-btn" onclick="showSection('certifications')">./certifications</button>
-      <button class="nav-btn" onclick="showSection('projects')">./projects</button>
-      <button class="nav-btn" onclick="showSection('social-projects')">./social-projects</button>
-      <button class="nav-btn" onclick="showSection('contact')">./contact</button>
+  <button class="nav-btn" onclick="showSection('projects')">./projects</button>
+  <button class="nav-btn" onclick="showSection('awards')">./awards</button>
+  <button class="nav-btn" onclick="showSection('social-projects')">./social-projects</button>
+  <button class="nav-btn" onclick="showSection('contact')">./contact</button>
     </div>
 
     <div class="terminal-content">
@@ -51,6 +52,7 @@
         </div>
       </div>
 
+
       <!-- ABOUT SECTION -->
       <div id="about" class="section">
         <div class="output">
@@ -58,11 +60,36 @@
         </div>
         <div class="output">
           <div class="section-header">$ cat about.md</div>
+          <div style="display:flex;justify-content:center;margin-bottom:22px;">
+            <div style="background:rgba(32,40,50,0.7);padding:14px 18px;border-radius:18px;box-shadow:0 6px 24px rgba(0,0,0,0.18);display:inline-block;">
+              <img src="img/foto-gabriel.jpeg" alt="Gabriel Chagas Lage" style="max-width:170px;width:100%;border-radius:12px;border:2.5px solid #30363d;box-shadow:0 4px 18px rgba(0,0,0,0.22);display:block;">
+            </div>
+          </div>
           <p>Gabriel Chagas Lage é um profissional em ascensão na área de computação em nuvem e DevOps, com uma trajetória marcada por especialização contínua e certificações de alto nível na AWS. Hoje, atua como Arquiteto de Soluções em Cloud Jr na ForceOne, onde desenha e implementa arquiteturas robustas, seguras e escaláveis, sempre alinhando soluções técnicas às necessidades de negócio.</p>
           <br>
-          <p>Sua experiência prática inclui projetos de migração para cloud, automação de infraestrutura, e aplicação de FinOps para manter custos sob controle sem comprometer a performance. Antes, desenvolveu uma sólida base como Estagiário DevOps na eduCAT Tecnologia, trabalhando com containers, orquestração (Kubernetes, Docker, Helm), infraestrutura como código (Terraform), pipelines CI/CD (Jenkins, CodePipeline) e gerenciamento de ambientes AWS.</p>
+          <p>Sua experiência prática inclui projetos de migração para cloud, automação de infraestrutura, e aplicação de FinOps para manter custos sob controle sem comprometer a performance. Antes, desenvolveu uma sólida base como Estagiário DevOps na eduCAT Tecnologia, trabalhando com containers, orquestração (Kubernetes, Docker, Helm), infraestrutura como código (Jenkins, CodePipeline, Terraform) e gerenciamento de ambientes AWS.</p>
           <br>
           <p>No campo acadêmico, Gabriel está cursando Engenharia de Software na PUC Minas e já possui formação técnica em informática pelo Colégio COTEMIG. Seu portfólio de certificações AWS impressiona, incluindo níveis Professional, Associate e Foundational, reforçando sua capacidade de lidar com desafios complexos e arquiteturas de alto nível.</p>
+        </div>
+      </div>
+
+      <!-- AWARDS SECTION -->
+      <div id="awards" class="section">
+        <div class="output">
+          <span class="prompt">gabriel@portfolio:~$</span> <span class="command">cat awards.txt</span>
+        </div>
+        <div class="output">
+          <div class="section-header">$ cat awards.txt</div>
+          <div style="display:flex;align-items:center;gap:32px;flex-wrap:wrap;justify-content:center;margin-bottom:18px;">
+            <div style="background:rgba(32,40,50,0.7);padding:14px 18px;border-radius:18px;box-shadow:0 6px 24px rgba(0,0,0,0.18);display:inline-block;">
+              <img src="img/premio-gabriel-forceone.jpeg" alt="Prêmio Funcionário Destaque ForceOne 2024" style="max-width:170px;width:100%;border-radius:12px;border:2.5px solid #30363d;box-shadow:0 4px 18px rgba(0,0,0,0.22);display:block;">
+            </div>
+            <div>
+              <h3 style="color:#7ee787;margin-bottom:8px;">Funcionário Destaque ForceOne 2024</h3>
+              <p>Reconhecimento pelo desempenho, dedicação e resultados excepcionais em projetos de Cloud Computing e DevOps na ForceOne.</p>
+              <a href="https://www.linkedin.com/feed/update/urn:li:activity:7337855253867913217/" target="_blank" style="color:#58a6ff;font-weight:500;text-decoration:none;display:inline-block;margin-top:8px;">🔗 Ver no LinkedIn</a>
+            </div>
+          </div>
         </div>
       </div>
 
