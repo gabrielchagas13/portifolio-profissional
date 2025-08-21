@@ -37,6 +37,7 @@ body {
   align-items: center;
   color: #c9d1d9;
   border-bottom: 1px solid #30363d;
+  position: relative;
 }
 
 .terminal-buttons {
@@ -48,6 +49,36 @@ body {
   width: 12px;
   height: 12px;
   border-radius: 50%;
+}
+
+.language-selector {
+  position: absolute;
+  right: 15px;
+  display: flex;
+  gap: 10px;
+  z-index: 100;
+}
+
+.language-flag {
+  width: 28px;
+  height: 21px;
+  cursor: pointer;
+  border-radius: 3px;
+  opacity: 0.6;
+  transition: all 0.2s ease;
+  border: 1px solid transparent;
+}
+
+.language-flag:hover {
+  transform: scale(1.1);
+  opacity: 0.8;
+  border-color: #30363d;
+}
+
+.language-flag.active {
+  opacity: 1;
+  box-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
+  border: 1px solid #58a6ff;
 }
 
 .close { background: #ff5f56; }

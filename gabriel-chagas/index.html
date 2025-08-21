@@ -15,18 +15,22 @@
         <div class="terminal-button maximize"></div>
       </div>
       <div class="terminal-title">gabriel@linux:~$ Cloud Solutions Architect</div>
+      <div class="language-selector">
+        <img src="img/flags/bandeira-estados-unidos.svg" alt="English" class="language-flag active" data-lang="en">
+        <img src="img/flags/flag-for-flag-brazil-svgrepo-com.svg" alt="Português" class="language-flag" data-lang="pt">
+      </div>
     </div>
 
     <div class="navigation">
-      <button class="nav-btn active" onclick="showSection('home')">~/home</button>
-      <button class="nav-btn" onclick="showSection('about')">./about</button>
-      <button class="nav-btn" onclick="showSection('experience')">./experience</button>
-      <button class="nav-btn" onclick="showSection('education')">./education</button>
-      <button class="nav-btn" onclick="showSection('certifications')">./certifications</button>
-  <button class="nav-btn" onclick="showSection('projects')">./projects</button>
-  <button class="nav-btn" onclick="showSection('awards')">./awards</button>
-  <button class="nav-btn" onclick="showSection('social-projects')">./social-projects</button>
-  <button class="nav-btn" onclick="showSection('contact')">./contact</button>
+      <button class="nav-btn active" onclick="showSection('home')" id="nav-home">~/home</button>
+      <button class="nav-btn" onclick="showSection('about')" id="nav-about">./about</button>
+      <button class="nav-btn" onclick="showSection('experience')" id="nav-experience">./experience</button>
+      <button class="nav-btn" onclick="showSection('education')" id="nav-education">./education</button>
+      <button class="nav-btn" onclick="showSection('certifications')" id="nav-certifications">./certifications</button>
+      <button class="nav-btn" onclick="showSection('projects')" id="nav-projects">./projects</button>
+      <button class="nav-btn" onclick="showSection('awards')" id="nav-awards">./awards</button>
+      <button class="nav-btn" onclick="showSection('social-projects')" id="nav-social">./social-projects</button>
+      <button class="nav-btn" onclick="showSection('contact')" id="nav-contact">./contact</button>
     </div>
 
     <div class="terminal-content">
@@ -35,20 +39,19 @@
         <div class="output">
           <span class="prompt">gabriel@portfolio:~$</span> <span class="command">whoami</span>
         </div>
-        <div class="output typing-effect">
+        <div class="output typing-effect" id="typing-effect">
           Gabriel Chagas Lage - Arquiteto de Soluções em Cloud
         </div>
         <div class="output">
           <span class="prompt">gabriel@portfolio:~$</span> <span class="command">cat welcome.txt</span>
         </div>
         <div class="output">
-          <div class="section-header">$ Bem-vindo ao meu Terminal Linux</div>
-          <p>⚡ Arquiteto de Soluções em Cloud | AWS Certified Professional</p>
-          <p>📍 Belo Horizonte, Minas Gerais, Brasil</p>
-          <p>🎓 Engenharia de Software - PUC Minas</p>
-          <p>🏆 Funcionário Destaque ForceOne 2024</p>
+          <div class="section-header" id="welcome-header">$ Bem-vindo ao meu Terminal Linux</div>
+          <p id="job-title">⚡ Arquiteto de Soluções em Cloud | AWS Certified Professional</p>
+          <p id="location">📍 Belo Horizonte, Minas Gerais, Brasil</p>
+          <p id="education-short">🎓 Engenharia de Software - PUC Minas</p>
+          <p id="award-short">🏆 Funcionário Destaque ForceOne 2024</p>
           <br>
-          <p>Navegue pelas abas acima para explorar minha trajetória em cloud computing.</p>
         </div>
       </div>
 
@@ -59,17 +62,17 @@
           <span class="prompt">gabriel@portfolio:~$</span> <span class="command">cat about.md</span>
         </div>
         <div class="output">
-          <div class="section-header">$ cat about.md</div>
+          <div class="section-header" id="about-title">$ cat about.md</div>
           <div style="display:flex;justify-content:center;margin-bottom:22px;">
             <div style="background:rgba(32,40,50,0.7);padding:14px 18px;border-radius:18px;box-shadow:0 6px 24px rgba(0,0,0,0.18);display:inline-block;">
               <img src="img/foto-gabriel.jpeg" alt="Gabriel Chagas Lage" style="max-width:170px;width:100%;border-radius:12px;border:2.5px solid #30363d;box-shadow:0 4px 18px rgba(0,0,0,0.22);display:block;">
             </div>
           </div>
-          <p>Gabriel Chagas Lage é um profissional em ascensão na área de computação em nuvem e DevOps, com uma trajetória marcada por especialização contínua e certificações de alto nível na AWS. Hoje, atua como Arquiteto de Soluções em Cloud Jr na ForceOne, onde desenha e implementa arquiteturas robustas, seguras e escaláveis, sempre alinhando soluções técnicas às necessidades de negócio.</p>
+          <p id="about-p1">Gabriel Chagas Lage é um profissional em ascensão na área de computação em nuvem e DevOps, com uma trajetória marcada por especialização contínua e certificações de alto nível na AWS. Hoje, atua como Arquiteto de Soluções em Cloud Jr na ForceOne, onde desenha e implementa arquiteturas robustas, seguras e escaláveis, sempre alinhando soluções técnicas às necessidades de negócio.</p>
           <br>
-          <p>Sua experiência prática inclui projetos de migração para cloud, automação de infraestrutura, e aplicação de FinOps para manter custos sob controle sem comprometer a performance. Antes, desenvolveu uma sólida base como Estagiário DevOps na eduCAT Tecnologia, trabalhando com containers, orquestração (Kubernetes, Docker, Helm), infraestrutura como código (Jenkins, CodePipeline, Terraform) e gerenciamento de ambientes AWS.</p>
+          <p id="about-p2">Sua experiência prática inclui projetos de migração para cloud, automação de infraestrutura, e aplicação de FinOps para manter custos sob controle sem comprometer a performance. Antes, desenvolveu uma sólida base como Estagiário DevOps na eduCAT Tecnologia, trabalhando com containers, orquestração (Kubernetes, Docker, Helm), infraestrutura como código (Jenkins, CodePipeline, Terraform) e gerenciamento de ambientes AWS.</p>
           <br>
-          <p>No campo acadêmico, Gabriel está cursando Engenharia de Software na PUC Minas e já possui formação técnica em informática pelo Colégio COTEMIG. Seu portfólio de certificações AWS impressiona, incluindo níveis Professional, Associate e Foundational, reforçando sua capacidade de lidar com desafios complexos e arquiteturas de alto nível.</p>
+          <p id="about-p3">No campo acadêmico, Gabriel está cursando Engenharia de Software na PUC Minas e já possui formação técnica em informática pelo Colégio COTEMIG. Seu portfólio de certificações AWS impressiona, incluindo níveis Professional, Associate e Foundational, reforçando sua capacidade de lidar com desafios complexos e arquiteturas de alto nível.</p>
         </div>
       </div>
 
@@ -102,45 +105,45 @@
           <div class="section-header">$ ls -la /experience</div>
           
           <div class="job-item">
-            <div class="item-title">Arquiteto de Soluções em Cloud Jr</div>
-            <div class="item-company">ForceOne • Tempo integral</div>
-            <div class="item-period">Mai 2025 - Presente · 4 meses</div>
+            <div class="item-title" id="architect-title">Arquiteto de Soluções em Cloud Jr</div>
+            <div class="item-company" id="forceone-company">ForceOne • Tempo integral</div>
+            <div class="item-period" id="architect-period">Mai 2025 - Presente · 4 meses</div>
             <div class="item-description">
-              • Desenho e implementação de arquiteturas em nuvem com foco em segurança, escalabilidade e eficiência operacional<br>
-              • Participação em projetos de migração de sistemas para ambientes cloud<br>
-              • Proposição de soluções alinhadas às necessidades técnicas e de negócio<br>
-              • Criação de automações para gestão de infraestrutura<br>
-              • Aplicação de práticas de FinOps para otimizar e controlar custos em nuvem<br>
+              <span id="design-security">• Desenho e implementação de arquiteturas em nuvem com foco em segurança, escalabilidade e eficiência operacional</span><br>
+              <span id="cloud-projects">• Participação em projetos de migração de sistemas para ambientes cloud</span><br>
+              <span id="tech-needs">• Proposição de soluções alinhadas às necessidades técnicas e de negócio</span><br>
+              <span id="automation">• Criação de automações para gestão de infraestrutura</span><br>
+              <span id="finops">• Aplicação de práticas de FinOps para otimizar e controlar custos em nuvem</span><br>
             </div>
           </div>
 
           <div class="job-item">
-            <div class="item-title">Estágio</div>
-            <div class="item-company">ForceOne</div>
-            <div class="item-period">Ago 2023 - Mai 2025 · 1 ano 10 meses</div>
+            <div class="item-title" id="devops-title">Estagiário DevOps</div>
+            <div class="item-company" id="educat-company">eduCAT Technology • Estágio</div>
+            <div class="item-period" id="devops-period">Ago 2023 - Mai 2025 · 1 ano 10 meses</div>
             <div class="item-description">
-              • Desenvolvimento de habilidades em arquitetura de nuvem<br>
-              • Participação em projetos de migração e automação<br>
-              • Aprendizado de práticas DevOps e cloud computing<br>
-              • Suporte em projetos de infraestrutura como código<br>
-              • 🏆 <strong>Funcionário Destaque ForceOne 2024</strong>
+              <span id="cloud-arch">• Desenvolvimento de habilidades em arquitetura de nuvem</span><br>
+              <span id="migration">• Participação em projetos de migração e automação</span><br>
+              <span id="devops-practices">• Aprendizado de práticas DevOps e cloud computing</span><br>
+              <span id="infra-code">• Suporte em projetos de infraestrutura como código</span><br>
+              <span id="award">• 🏆 <strong>Funcionário Destaque ForceOne 2024</strong></span>
             </div>
           </div>
 
           <div class="job-item">
-            <div class="item-title">Estágio DevOps</div>
-            <div class="item-company">eduCAT Tecnologia • Belo Horizonte, MG</div>
-            <div class="item-period">Jun 2022 - Jul 2023 · 1 ano 2 meses</div>
+            <div class="item-title" id="devops-title-2">Estagiário DevOps</div>
+            <div class="item-company" id="educat-company-2">eduCAT Technology • Belo Horizonte, MG</div>
+            <div class="item-period" id="devops-period-2">Jun 2022 - Jul 2023 · 1 ano 2 meses</div>
             <div class="item-description">
-              • Orquestração de containers utilizando Docker, Kubernetes e Helm<br>
-              • Implementação de sistemas na Cloud AWS (CodeBuild, Secret Manager, EC2, ECR, CodePipeline, Route 53, Lambda, IAM, CloudFront, S3)<br>
-              • Gerenciamento de servidores NGINX<br>
-              • Criação e monitoramento de projetos no Google Firebase<br>
-              • Automação de implantação usando Terraform<br>
-              • Utilização do Jenkins para integração e implantação contínua<br>
-              • Administração do Proxmox para virtualização<br>
-              • Gerenciamento de instâncias MongoDB em ambiente Kubernetes<br>
-              • Administração do Billing na AWS
+              <span id="container-orchestration">• Orquestração de containers utilizando Docker, Kubernetes e Helm</span><br>
+              <span id="aws-implementation">• Implementação de sistemas na Cloud AWS (CodeBuild, Secret Manager, EC2, ECR, CodePipeline, Route 53, Lambda, IAM, CloudFront, S3)</span><br>
+              <span id="nginx-management">• Gerenciamento de servidores NGINX</span><br>
+              <span id="firebase">• Criação e monitoramento de projetos no Google Firebase</span><br>
+              <span id="terraform">• Automação de implantação usando Terraform</span><br>
+              <span id="jenkins">• Utilização do Jenkins para integração e implantação contínua</span><br>
+              <span id="proxmox">• Administração do Proxmox para virtualização</span><br>
+              <span id="mongodb">• Gerenciamento de instâncias MongoDB em ambiente Kubernetes</span><br>
+              <span id="aws-billing">• Administração do Billing na AWS</span>
             </div>
           </div>
         </div>
@@ -155,20 +158,20 @@
           <div class="section-header">$ cat /education/degrees.txt</div>
           
           <div class="job-item">
-            <div class="item-title">Bacharelado em Engenharia de Software</div>
+            <div class="item-title" id="software-engineering">Bacharelado em Engenharia de Software</div>
             <div class="item-company">PUC Minas</div>
             <div class="item-period">Fev 2023 - Dez 2027</div>
-            <div class="item-description">
+            <div class="item-description" id="ongoing-degree">
               Graduação em andamento com foco em desenvolvimento de software, arquitetura de sistemas e tecnologias emergentes.
             </div>
           </div>
 
           <div class="job-item">
-            <div class="item-title">Técnico em Informática</div>
+            <div class="item-title" id="tech-course">Técnico em Informática</div>
             <div class="item-company">Colégio COTEMIG</div>
             <div class="item-period">2021 - 2022</div>
             <div class="item-description">
-              Formação técnica em informática com base em programação, redes e infraestrutura tecnológica.
+              <span id="tech-formation">Formação técnica em informática com base em programação, redes e infraestrutura tecnológica.</span>
             </div>
           </div>
         </div>
@@ -180,17 +183,17 @@
           <span class="prompt">gabriel@portfolio:~$</span> <span class="command">find ./certifications -type f</span>
         </div>
         <div class="output">
-          <div class="section-header">$ find /certifications -name "*.cert"</div>
+          <div class="section-header" id="cert-header">$ find /certifications -name "*.cert"</div>
           
           <div class="cert-item">
             <div class="cert-content">
               <div class="cert-info">
-                <div class="item-title">AWS Certified Solutions Architect – Professional</div>
+                <div class="item-title" id="pro-architect">AWS Certified Solutions Architect – Professional</div>
                 <div class="item-company">Amazon Web Services (AWS)</div>
                 <div class="item-period">Jul 2025 - Jul 2028</div>
                 <div class="item-description">
-                  Certificação avançada que valida competências em design e implementação de arquiteturas distribuídas e sistemas na AWS. Demonstra expertise em arquiteturas complexas, migração para cloud e otimização de custos.<br><br>
-                  <a href="https://www.credly.com/badges/0e797e59-ee0b-40fb-bc4e-129e54e68438/linked_in_profile" class="cert-link" target="_blank">🔗 Ver Credencial</a>
+                  <span id="pro-desc">Certificação avançada que valida competências em design e implementação de arquiteturas distribuídas e sistemas na AWS. Demonstra expertise em arquiteturas complexas, migração para cloud e otimização de custos.</span><br><br>
+                  <a href="https://www.credly.com/badges/0e797e59-ee0b-40fb-bc4e-129e54e68438/linked_in_profile" class="cert-link" target="_blank" id="view-credential-1">🔗 Ver Credencial</a>
                 </div>
               </div>
               <div class="cert-image">
@@ -204,12 +207,12 @@
           <div class="cert-item">
             <div class="cert-content">
               <div class="cert-info">
-                <div class="item-title">AWS Certified SysOps Administrator – Associate</div>
+                <div class="item-title" id="sysops-admin">AWS Certified SysOps Administrator – Associate</div>
                 <div class="item-company">Amazon Web Services (AWS)</div>
                 <div class="item-period">Out 2024 - Out 2027</div>
                 <div class="item-description">
-                  Certificação que comprova habilidades em administração de sistemas na AWS, incluindo monitoramento, troubleshooting, automação de tarefas operacionais e implementação de práticas de segurança.<br><br>
-                  <a href="https://www.credly.com/badges/1701d6ee-480c-4ac3-bfa5-09df81880d39/linked_in_profile" class="cert-link" target="_blank">🔗 Ver Credencial</a>
+                  <span id="sys-ops">Certificação que comprova habilidades em administração de sistemas na AWS, incluindo monitoramento, troubleshooting, automação de tarefas operacionais e implementação de práticas de segurança.</span><br><br>
+                  <a href="https://www.credly.com/badges/1701d6ee-480c-4ac3-bfa5-09df81880d39/linked_in_profile" class="cert-link" target="_blank" id="view-credential-2">🔗 Ver Credencial</a>
                 </div>
               </div>
               <div class="cert-image">
@@ -223,12 +226,12 @@
           <div class="cert-item">
             <div class="cert-content">
               <div class="cert-info">
-                <div class="item-title">AWS Certified Solutions Architect – Associate</div>
+                <div class="item-title" id="associate-architect">AWS Certified Solutions Architect – Associate</div>
                 <div class="item-company">Amazon Web Services (AWS)</div>
                 <div class="item-period">Jul 2024 - Jul 2027</div>
                 <div class="item-description">
-                  Validação de conhecimentos em arquitetura de soluções na AWS, incluindo design de aplicações resilientes, seguras e escaláveis na nuvem usando os serviços AWS.<br><br>
-                  <a href="https://www.credly.com/badges/73eae092-4def-4843-bfac-848ec45c3477/linked_in_profile" class="cert-link" target="_blank">🔗 Ver Credencial</a>
+                  <span id="associate-desc">Validação de conhecimentos em arquitetura de soluções na AWS, incluindo design de aplicações resilientes, seguras e escaláveis na nuvem usando os serviços AWS.</span><br><br>
+                  <a href="https://www.credly.com/badges/73eae092-4def-4843-bfac-848ec45c3477/linked_in_profile" class="cert-link" target="_blank" id="view-credential-3">🔗 Ver Credencial</a>
                 </div>
               </div>
               <div class="cert-image">
@@ -242,7 +245,7 @@
           <div class="cert-item">
             <div class="cert-content">
               <div class="cert-info">
-                <div class="item-title">AWS Certified Cloud Practitioner</div>
+                <div class="item-title" id="cloud-practitioner">AWS Certified Cloud Practitioner</div>
                 <div class="item-company">Amazon Web Services (AWS)</div>
                 <div class="item-period">Set 2023 - Set 2026</div>
                 <div class="item-description">
@@ -323,7 +326,7 @@
             <div class="item-title">Agência Experimental de Software</div>
             <div class="item-period">Fev 2024 - Jul 2024</div>
             <div class="item-description">
-              Participação em projeto acadêmico focado no desenvolvimento de soluções de software para problemas reais da comunidade, aplicando conhecimentos de engenharia de software em projetos de impacto social.
+              <span id="social-academic">Participação em projeto acadêmico focado no desenvolvimento de soluções de software para problemas reais da comunidade, aplicando conhecimentos de engenharia de software em projetos de impacto social.</span>
             </div>
           </div>
 
@@ -331,7 +334,7 @@
             <div class="item-title">Programa de Padrinhos</div>
             <div class="item-period">Jul 2024 - Dez 2024 | Jan 2025 - Jul 2025 (Coordenação)</div>
             <div class="item-description">
-              Mentoria e coordenação de programa voltado para desenvolvimento pessoal e profissional de jovens. Responsável pela organização de atividades educacionais e desenvolvimento de habilidades tecnológicas.
+              <span id="social-mentoring">Mentoria e coordenação de programa voltado para desenvolvimento pessoal e profissional de jovens. Responsável pela organização de atividades educacionais e desenvolvimento de habilidades tecnológicas.</span>
             </div>
           </div>
         </div>
@@ -348,14 +351,12 @@
             <p><strong>📧 Email:</strong> <a href="mailto:gabrielclage04@email.com" class="contact-link">gabrielclage04@email.com</a></p>
             <p><strong>💼 LinkedIn:</strong> <a href="https://www.linkedin.com/in/gabriel-chagas-lage" target="_blank" class="contact-link">linkedin.com/in/gabriel-chagas-lage</a></p>
             <p><strong>📍 Localização:</strong> Minas Gerais, Brasil</p>
-            <p><strong>📱 Telefone:</strong> Disponível via LinkedIn</p>
           </div>
           <br>
           <div class="output">
-            <span class="prompt">gabriel@portfolio:~$</span> <span class="command">echo "Obrigado pela visita!"</span>
+            <span class="prompt">gabriel@portfolio:~$</span> <span class="command" id="thank-you-cmd">echo "Obrigado pela visita!"</span>
           </div>
           <div class="output">
-            Obrigado pela visita! Entre em contato para discutir oportunidades de colaboração.
           </div>
         </div>
       </div>
