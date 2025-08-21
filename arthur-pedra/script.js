@@ -1,17 +1,16 @@
-// ===== Navegação entre seções (corrigido para usar event) =====
+
 function showSection(event, sectionName) {
-  // Esconde todas as seções
+
   document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
-  // Remove 'active' de todos botões
-  document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
-  // Mostra a seção alvo
+ 
+
   const target = document.getElementById(sectionName);
   if (target) target.classList.add('active');
-  // Marca o botão clicado
+  
   if (event && event.currentTarget) event.currentTarget.classList.add('active');
 }
 
-// Reinicia typing-effect quando clicar em Home
+
 function hookTypingRestartOnHome() {
   const homeBtn = Array.from(document.querySelectorAll('.nav-btn'))
     .find(b => b.getAttribute('onclick')?.includes("'home'"));
@@ -40,13 +39,13 @@ function hookEscapeToHome() {
   });
 }
 
-// ===== i18n simples usando data-i18n =====
+
 const translations = {
   en: {
     "site.title": "Arthur Henrique Santana | Software Engineering Intern",
     "terminal.title": "Arthur@linux:~$ Software Engineering Intern",
 
-    // navegação
+    
     "nav.home": "~/home",
     "nav.about": "./about",
     "nav.experience": "./experience",
@@ -175,7 +174,7 @@ const translations = {
   }
 };
 
-// idioma inicial: preferir localStorage, depois idioma do navegador
+
 function detectInitialLang() {
   const saved = localStorage.getItem('language');
   if (saved) return saved;
@@ -186,16 +185,16 @@ function detectInitialLang() {
 function applyLanguage(lang) {
   const dict = translations[lang] || translations.pt;
 
-  // html lang (acessibilidade/SEO)
+ 
   document.documentElement.lang = (lang === 'pt') ? 'pt-BR' : 'en';
 
-  // aplica em todos elementos com data-i18n
+
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const key = el.getAttribute('data-i18n');
     const value = dict[key];
     if (value == null) return;
 
-    // se o texto tem HTML (links/strong), use innerHTML
+  
     if (/(proj\.|contact\.|about\.|exp\.)/.test(key)) {
       el.innerHTML = value;
     } else {
@@ -203,12 +202,12 @@ function applyLanguage(lang) {
     }
   });
 
-  // destacar bandeira ativa
+
   document.querySelectorAll('.language-flag').forEach(flag => {
     flag.classList.toggle('active', flag.getAttribute('data-lang') === lang);
   });
 
-  // salva preferência
+  
   localStorage.setItem('language', lang);
 }
 
@@ -228,3 +227,4 @@ document.addEventListener('DOMContentLoaded', () => {
   hookTypingRestartOnHome();
   hookEscapeToHome();
 });
+
