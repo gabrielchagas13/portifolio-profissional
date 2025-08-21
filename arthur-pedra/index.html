@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="site.title">Arthur Henrique Santana | Estagiário em Engenharia de Software</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <div class="terminal-container">
+    <div class="terminal-header">
+      <div class="terminal-buttons">
+        <div class="terminal-button close"></div>
+        <div class="terminal-button minimize"></div>
+        <div class="terminal-button maximize"></div>
+      </div>
+      <div class="terminal-title" id="terminal-title" data-i18n="terminal.title">
+        Arthur@linux:~$ Estagiário em Engenharia de Software
+      </div>
+
+      <!-- Seletor de idioma -->
+      <div class="language-selector" aria-label="Language selector">
+        <img src="img/flags/bandeira-estados-unidos.svg" alt="English" class="language-flag" data-lang="en">
+        <img src="img/flags/flag-for-flag-brazil-svgrepo-com.svg" alt="Português" class="language-flag" data-lang="pt">
+      </div>
+    </div>
+
+    <div class="navigation">
+      <button class="nav-btn active" onclick="showSection(event,'home')" data-i18n="nav.home">~/home</button>
+      <button class="nav-btn" onclick="showSection(event,'about')" data-i18n="nav.about">./about</button>
+      <button class="nav-btn" onclick="showSection(event,'experience')" data-i18n="nav.experience">./experience</button>
+      <button class="nav-btn" onclick="showSection(event,'education')" data-i18n="nav.education">./education</button>
+      <button class="nav-btn" onclick="showSection(event,'skills')" data-i18n="nav.skills">./skills</button>
+      <button class="nav-btn" onclick="showSection(event,'projects')" data-i18n="nav.projects">./projects</button>
+      <button class="nav-btn" onclick="showSection(event,'contact')" data-i18n="nav.contact">./contact</button>
+    </div>
+
+    <div class="terminal-content">
+      <!-- HOME -->
+      <div id="home" class="section active">
+        <div class="output">
+          <span class="prompt">Arthur@portfolio:~$</span> <span class="command">whoami</span>
+        </div>
+        <div class="output typing-effect" data-i18n="home.typing">
+          Arthur Henrique Santana - Estagiário em Engenharia de Software
+        </div>
+        <div class="output">
+          <span class="prompt">Arthur@portfolio:~$</span> <span class="command">cat welcome.txt</span>
+        </div>
+        <div class="output">
+          <div class="section-header" data-i18n="home.welcome">$ Bem-vindo ao meu Terminal Linux</div>
+          <p data-i18n="home.role">⚡ Estagiário em Engenharia de Software | Kubernetes, Linux , QA</p>
+          <p data-i18n="home.location">📍 Belo Horizonte, Minas Gerais, Brasil</p>
+          <p data-i18n="home.educationShort">🎓 Engenharia de Software - PUC Minas</p>
+          <p data-i18n="home.devops">🚀 Especialista em DevOps, Kubernetes</p>
+          <br>
+          <p data-i18n="home.navHint">Navegue pelas abas acima para explorar minha trajetória em tecnologia.</p>
+        </div>
+      </div>
+
+      <!-- ABOUT -->
+      <div id="about" class="section">
+        <div class="output">
+          <span class="prompt">Arthur@portfolio:~$</span> <span class="command">cat about.md</span>
+        </div>
+         <div class="profile-pic">
+  <img src="img/profile.jpg" alt="Foto de Perfil">
+</div>
+        <div class="output">
+          <div class="section-header">$ cat about.md</div>
+          <p data-i18n="about.p1">
+            Estagiário em Engenharia de Software com foco em testes de aplicações num ecossistema de nuvem com computação de borda. Experiência sólida em testes, ferramentas de automação e monitoramento.
+          </p>
+          <br>
+          <p data-i18n="about.p2">
+            Especialista em orquestração de containers (Docker, Kubernetes), CI/CD com ferramentas como Jenkins, Ansible, entre outros.
+          </p>
+          <br>
+        </div>
+      </div>
+
+      <!-- EXPERIENCE -->
+      <div id="experience" class="section">
+        <div class="output">
+          <span class="prompt">Arthur@portfolio:~$</span> <span class="command">ls -la ./experience/</span>
+        </div>
+        <div class="output">
+          <div class="section-header">$ ls -la /experience</div>
+
+          <div class="job-item">
+            <div class="item-title" data-i18n="exp.role1.title">Estágio</div>
+            <div class="item-company" data-i18n="exp.role1.company">Encora</div>
+            <div class="item-period" data-i18n="exp.role1.period">Mai 2025 - Até o momento</div>
+            <div class="item-description">
+              <span data-i18n="exp.role1.b1">• Desenvolvimento de habilidades em Devops</span><br>
+              <span data-i18n="exp.role1.b2">• Forte atuação em testes de PV, KPI, System Engineering, etc...</span><br>
+              <span data-i18n="exp.role1.b3">• Aprendizado de práticas DevOps e cloud computing</span><br>
+              <span data-i18n="exp.role1.b4">• Participação num projeto internacional, tendo como língua utilizada o Inglês</span>
+            </div>
+          </div>
+
+          <div class="job-item">
+            <div class="item-title" data-i18n="exp.role2.title">SDR (Sales Development Representative)</div>
+            <div class="item-company" data-i18n="exp.role2.company">Aure Digital • Belo Horizonte, MG</div>
+            <div class="item-period" data-i18n="exp.role2.period">Jun 2024 - Mai 2025 · 8 meses</div>
+            <div class="item-description">
+              <span data-i18n="exp.role2.b1">• Qualificação de possíveis oportunidades comerciais</span><br>
+              <span data-i18n="exp.role2.b2">• Agendamento de reuniões para os Closers</span><br>
+              <span data-i18n="exp.role2.b3">• Participei na criação de pipelines para os processos de venda</span><br>
+              <span data-i18n="exp.role2.b4">• Trabalho de reativação da base de clientes</span><br>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- EDUCATION -->
+      <div id="education" class="section">
+        <div class="output">
+          <span class="prompt">Arthur@portfolio:~$</span> <span class="command">cat education.json</span>
+        </div>
+        <div class="output">
+          <div class="section-header">$ cat /education/degrees.txt</div>
+          <div class="job-item">
+            <div class="item-title" data-i18n="edu.degree">Bacharelado em Engenharia de Software</div>
+            <div class="item-company">PUC Minas</div>
+            <div class="item-period">Fev 2023 - Dez 2027</div>
+            <div class="item-description" data-i18n="edu.desc">
+              Graduação em andamento com foco em desenvolvimento de software, arquitetura de sistemas e tecnologias emergentes.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SKILLS -->
+      <div id="skills" class="section">
+        <div class="output">
+          <span class="prompt">Arthur@portfolio:~$</span> <span class="command">./skills --list-all</span>
+        </div>
+        <div class="output">
+          <div class="section-header" data-i18n="skills.header">$ ./skills --list-all</div>
+          <div class="skills-grid">
+            <div class="skill-item">Docker & Kubernetes</div>
+            <div class="skill-item">Jenkins</div>
+            <div class="skill-item">DevOps</div>
+            <div class="skill-item" data-i18n="skills.iac">Infrastructure as Code</div>
+            <div class="skill-item">Helm</div>
+            <div class="skill-item">Container Orchestration</div>
+            <div class="skill-item">Cloud Migration</div>
+            <div class="skill-item" data-i18n="skills.automation">Automation</div>
+            <div class="skill-item">Python</div>
+            <div class="skill-item">Jira, Confluence, Bitbucket</div>
+            <div class="skill-item">Java</div>
+            <div class="skill-item" data-i18n="skills.testsAuto">Automated Tests</div>
+            <div class="skill-item" data-i18n="skills.testsManual">Manual Tests</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROJECTS -->
+      <div id="projects" class="section">
+        <div class="output">
+          <span class="prompt">Arthur@portfolio:~$</span> <span class="command">ls -la ./projects/</span>
+        </div>
+        <div class="output">
+          <div class="section-header">$ ls -la /projects</div>
+          <div class="project-item">
+            <div class="item-title">Projeto 1 - SGA</div>
+            <div class="item-period" data-i18n="proj.sga.period">Segundo Semestre de 2024</div>
+            <div class="item-description" data-i18n="proj.sga.desc">
+              Projeto em grupo realizado na universidade, simulando um sistema para gerenciamento de Auto Escolas. <br><br>
+              <strong>Tecnologias:</strong> Java, JavaScript, HTML, CSS<br>
+              <a href="https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2024-2-ti2-3740100-sga-auto-escola" class="contact-link" target="_blank">📂 GitHub</a>
+              <strong>Link:</strong> <a href="#" class="contact-link" target="_blank">🔗 Ver Projeto</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CONTACT -->
+      <div id="contact" class="section">
+        <div class="output">
+          <span class="prompt">Arthur@portfolio:~$</span> <span class="command">cat contact.info</span>
+        </div>
+        <div class="output">
+          <div class="section-header">$ cat /contact/info.txt</div>
+          <div class="contact-info">
+            <p><strong>📧 Email:</strong> <a href="mailto:arthurpedrasantana@email.com" class="contact-link">arthurpedrasantana@email.com</a></p>
+            <p><strong>💼 LinkedIn:</strong> <a href="https://www.linkedin.com/in/arthur-pedra-111744218/" target="_blank" class="contact-link">linkedin.com/in/arthur-pedra</a></p>
+            <p data-i18n="contact.location"><strong>📍 Localização:</strong> Minas Gerais, Brasil</p>
+            <p data-i18n="contact.phone"><strong>📱 Telefone:</strong> Disponível via LinkedIn</p>
+          </div>
+          <br>
+          <div class="output">
+            <span class="prompt">Arthur@portfolio:~$</span> <span class="command" id="thank-you-cmd" data-i18n="contact.echo">echo "Obrigado pela visita!"</span>
+          </div>
+          <div class="output" id="contact-thanks" data-i18n="contact.thanks">
+            Obrigado pela visita! Entre em contato para discutir oportunidades de colaboração.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- movi o script para o final do body para evitar race condition -->
+  <script src="script.js"></script>
+</body>
+</html>
